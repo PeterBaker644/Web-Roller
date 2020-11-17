@@ -1,0 +1,9 @@
+Ideas for Webroller:
+
+One side calculator, the other a chat log
+Maybe some kind of parchment background?
+Some delicate flavor text for the roles perhaps? Some kind of extra text showing the rolls.
+
+Figure out how to make chat rooms, maybe generate a key, or offer the user a chance to generate a key, to allow players to join the room. 
+Create a temporary session that is deleted at the end of the session, allow the users to download a file generated from the (json?) files? Maybe this gets filed to the user's account?
+
