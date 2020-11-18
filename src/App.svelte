@@ -8,10 +8,10 @@
 </script>
 
 <Header />
-<Footer />
 <Roller />
 <Room />
 <Background />
+<Footer />
 
 <style>
 

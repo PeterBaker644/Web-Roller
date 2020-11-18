@@ -35,8 +35,9 @@
 <style>
     header {
         margin: 0;
-        background-color: var(--grey-mid);
+        background-color: var(--grey-dark);
         color: white;
+        z-index: 1;
     }
     h1 {
         margin: 0;
@@ -46,11 +47,11 @@
         padding: 0.5rem 0 0 1rem;
     }
     button {
-        color: white;
+        color: var(--neutral);
     }
     .title {
         /* height: 100px; */
-        background-color: var(--grey-dark);
+        background-color: var(--dark);
         border-bottom: 2px solid var(--color-dark);
         display: flex;
         justify-content: space-between;
@@ -62,9 +63,10 @@
         align-items: center;
         margin: 0em 1rem;
         font: 32px 'cyrodiil';
+        color: var(--neutral)
     }
     .user {
-        font-family: 'NT-SC';
+        font-variant: small-caps;
         margin: 1em;
     }
     .room {
@@ -74,11 +76,10 @@
     }
     .clock {
         margin: 0em 1em;
-        font: 14px 'NT';
-        /* justify-self: start; */
+        font: 14px var(--sans);
+        font-variation-settings: 'wght' 300;
     }
     .character {
-        /* justify-self: end; */
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -91,10 +92,10 @@
         height:100px;
         object-fit: cover;
         object-position: 50% 20%;
-        z-index: 1;
         border: 4px solid var(--color-dark);
         border-radius: 100%;
         margin: 0.3em;
+        z-index: 1;
         box-shadow: 0px 4px 7px 0px rgba(0,0,0,0.34);
     }
 </style>

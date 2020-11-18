@@ -1,27 +1,32 @@
 <script>
-    export let text;
+    export let text, bgcolor;
 </script>
 
-<button id="button">
+<button class="button {bgcolor}">
     {text}
 </button>
 
 <style>
    button {
-        background-color: var(--grey-mid);
+        background-color: var(--grey-dark);
         color: white;
+        font-size: 20px;
     }
     button:hover {
-        background-color: var(--grey-light);
+        border: 2px solid rgba(0, 0, 0, .05);
     }
     .white {
-        background-color: var(--grey-mid);
-        color: white;
+        background-color: white;
+        color: var(--dark);
+        font-variation-settings: 'wght' 380;
     }
     .light {
-
+        background-color: var(--color-light);
+        color: var(--dark);
+        font-variation-settings: 'wght' 350;
     }
     .dark {
-
+        background-color: var(--color-dark);
+        color: var(--dark);
     }
 </style>

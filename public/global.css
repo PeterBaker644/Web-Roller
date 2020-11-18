@@ -12,36 +12,24 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'NT';
-    src: url('assets/NT-Book.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'NT';
-    src: url('assets/NT-Light.woff2') format('woff2');
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'NT-SC';
-    src: url('assets/NT-BookSC.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
+:focus, :active {
+    outline: none;
 }
 
 :root {
-    --grey-dark: #232323;
-    --grey-mid: #515151;
-    --grey-light: #6B6B6B;
+    --dark: #232323;
+    --grey-dark: #515151;
+    --grey-mid: #6B6B6B;
+    --grey-light: #888888;
     --neutral:  #f1efe3;
+    --neutral-hover: #E9E8D6;
 
     --color-dark: #c28383;
     --color-light:#dfa6a6;
 
     --column: 320px;
+
+    --sans: 'Josefin Sans';
 }
 
 html {
@@ -56,13 +44,20 @@ html {
 
 body {
     min-height: calc(100vh - 100px);
-	margin: 0;
+    margin: 0;
+    font-family: var(--sans);
+    font-variation-settings: 'wght' 360;
 }
 
 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     background: none;
     cursor: pointer;
-    font: 14px 'NT';
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 350;
 }
 
