@@ -1,5 +1,5 @@
 <script>
-
+    import Die from "./elements/Die.svelte";
 </script>
 
 <footer>
@@ -15,7 +15,9 @@
         <textarea/>
     </div>
     <button class="icon">
-        roll
+        <div class="svg">
+            <Die/>
+        </div>
     </button>
     <div class="field">
         <div class="roll">
@@ -80,4 +82,7 @@
         border-radius: 100%;
         border: 3px solid var(--neutral);
     }
+    /* .svg {
+        padding: 16px 0px 0px;
+    } */
 </style>

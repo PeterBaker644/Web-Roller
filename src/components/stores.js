@@ -29,3 +29,9 @@ export const room = writable(
         dm: "Anthony Marcus"
     }
 )
+
+export const page = writable(
+    {
+        visible:"true"
+    }
+)

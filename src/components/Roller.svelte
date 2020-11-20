@@ -41,6 +41,11 @@
 </script>
 
 <div class="roller-sidebar">
+    <div class="arrow">
+        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-chevron-compact-left" fill="black" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+        </svg>
+    </div>
     <section class="details">
         <div class="class">
             {charClass}
@@ -83,7 +88,7 @@
     position: absolute;
     right: 0;
     width: var(--column);
-    height: calc(100% - 142px);
+    height: calc(100vh - 142px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -151,5 +156,10 @@
     font-variation-settings: 'wght'400;
     height: 32px;
     margin: 0rem 0.5rem;
+}
+.arrow {
+    bottom: 50%;
+    left: -45px;
+    position: absolute;
 }
 </style>

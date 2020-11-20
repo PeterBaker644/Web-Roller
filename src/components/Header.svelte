@@ -1,6 +1,5 @@
 <script>
-    import { user, character, room } from './stores';
-
+    import { user, character, room, page } from './stores';
     let now = new Date();
     const date = { year: 'numeric', month: 'long', day: 'numeric' };
     const time = { hour: 'numeric', minute: 'numeric' };
@@ -21,6 +20,10 @@
                 {now.toLocaleDateString(undefined, date)}
                 &nbsp
                 {now.toLocaleTimeString(undefined, time)}
+                <label>
+                    <input type="checkbox" bind:checked={$page.visible}>
+                    Dice Roller
+                </label>
             </span>
         </div>
         <button>Edit Character</button>

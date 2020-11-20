@@ -47,7 +47,25 @@ body {
     margin: 0;
     font-family: var(--sans);
     font-variation-settings: 'wght' 360;
+    /* Hide horizontal scrollbar. Don't forget about this. */
+    overflow-x: hidden;
 }
+
+/* Rules for scrollbars */
+* {
+    scrollbar-width: none;
+    scrollbar-color: var(--grey-light) var(--grey-dark);
+}
+body::-webkit-scrollbar {
+    width: 0px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--grey-dark);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--grey-light);    
+}
+/* ==================== */
 
 button {
     display: flex;

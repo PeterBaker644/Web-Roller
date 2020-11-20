@@ -11,7 +11,7 @@
     left: 0;
     z-index: -1;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-image: url("/assets/images/map.png");
     background-position: center;
     background-size: cover;
@@ -26,7 +26,7 @@
     left: 0;
     z-index: -1;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-image: url("/assets/images/map.png");
     background-position: center;
     background-size: cover;
