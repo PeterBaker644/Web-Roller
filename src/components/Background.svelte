@@ -9,7 +9,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -5;
     width: 100%;
     height: 100vh;
     background-image: url("/assets/images/map.png");
@@ -24,7 +24,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -5;
     width: 100%;
     height: 100vh;
     background-image: url("/assets/images/map.png");

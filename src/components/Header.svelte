@@ -21,7 +21,7 @@
                 &nbsp
                 {now.toLocaleTimeString(undefined, time)}
                 <label>
-                    <input type="checkbox" bind:checked={$page.visible}>
+                    <input type="checkbox" bind:checked={$page.roller}>
                     Dice Roller
                 </label>
             </span>

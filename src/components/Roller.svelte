@@ -1,8 +1,10 @@
 <script>
+    import { fly } from 'svelte/transition';
     import { user, character, room } from './stores';
     import CalcButton from './elements/CalcButton.svelte'
     import Switch from './elements/Switch.svelte'
     import Ability from './elements/Ability.svelte'
+    import Pulltab from './elements/Pulltab.svelte';
 
     const charClass = $character.class.map((entry) => Object.values(entry).join(" ")).join(" ");
 
@@ -40,12 +42,8 @@
     ]
 </script>
 
-<div class="roller-sidebar">
-    <div class="arrow">
-        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-chevron-compact-left" fill="black" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
-        </svg>
-    </div>
+<div transition:fly="{{ x: 320, duration: 200 }}" class="roller-sidebar">
+    <Pulltab side="roller"/>
     <section class="details">
         <div class="class">
             {charClass}
@@ -85,18 +83,14 @@
 <style>
 
 .roller-sidebar {
-    position: absolute;
+    position: relative;
     right: 0;
-    width: var(--column);
-    height: calc(100vh - 142px);
+    width: 320px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--grey-mid);
     color: var(--neutral);
-}
-.input {
-    margin-bottom: 80px;
 }
 .bonus {
     width: 60px;
@@ -158,8 +152,16 @@
     margin: 0rem 0.5rem;
 }
 .arrow {
-    bottom: 50%;
-    left: -45px;
+    bottom: 50vh;
+    left: -28px;
     position: absolute;
+    height: 52px;
+    width: 52px;
+    border-radius: 30px;
+    padding: 0.5em 0 0 0;
+    background-color: rgba(255,255,255,0.2);
+    border: 2px solid var(--grey-dark);
+    backdrop-filter: blur(2px);
+    z-index: -1;
 }
 </style>

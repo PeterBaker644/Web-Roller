@@ -21,17 +21,18 @@ export const room = writable(
     {
         name:"Ravenloft",
         users: [
-            {name:"Peter Baker", character: "Wren Marking", class: [{name:"Rogue", level:3}, {name:"Warlock", level:2}]},
-            {name:"Jake Nelson", character: "Bree Tealeaf", class: {name:"Cleric", level:3}},
-            {name:"Damien Hutchins", character: "Reed Tealeaf", class: {name:"Wizard", level:3}},
-            {name:"Susan Menril", character: "Tawnely Nighthill", class: [{name:"Rogue", level:3}, {name:"Fighter", level:1}]}
+            {id:0, name:"Peter Baker", character: "Wren Marking", class: [{name:"Rogue", level:3}, {name:"Warlock", level:2}], image: "/assets/images/wren.jpg"},
+            {id:1, name:"Jake Nelson", character: "Bree Tealeaf", class: {name:"Cleric", level:3}, image: "/assets/images/bree.jpg"},
+            {id:2, name:"Damien Hutchins", character: "Reed Tealeaf", class: {name:"Wizard", level:3}, image: "/assets/images/reed.jpg"},
+            {id:3, name:"Susan Menril", character: "Tawnely Nighthill", class: [{name:"Rogue", level:3}, {name:"Fighter", level:1}, ], image: "/assets/images/tawnely.jpg"}
         ],
-        dm: "Anthony Marcus"
+        dm: {name:"Anthony Marcus", image:"/assets/images/dm.jpg"}
     }
 )
 
 export const page = writable(
     {
-        visible:"true"
+        roller:true,
+        room:false
     }
 )

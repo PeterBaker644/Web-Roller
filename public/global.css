@@ -16,6 +16,7 @@
     outline: none;
 }
 
+/* ==== Define Variables ==== */
 :root {
     --dark: #232323;
     --grey-dark: #515151;
@@ -23,14 +24,13 @@
     --grey-light: #888888;
     --neutral:  #f1efe3;
     --neutral-hover: #E9E8D6;
-
     --color-dark: #c28383;
     --color-light:#dfa6a6;
-
+    --color-transparent:rgba(250, 135, 135, 0.4);
     --column: 320px;
-
     --sans: 'Josefin Sans';
 }
+/* ========================== */
 
 html {
     box-sizing: border-box;
@@ -47,11 +47,11 @@ body {
     margin: 0;
     font-family: var(--sans);
     font-variation-settings: 'wght' 360;
-    /* Hide horizontal scrollbar. Don't forget about this. */
+    /* This is to help the transition with the sidebars, and the dumb pulltabs */
     overflow-x: hidden;
 }
 
-/* Rules for scrollbars */
+/* ==== Rules for scrollbars ==== */
 * {
     scrollbar-width: none;
     scrollbar-color: var(--grey-light) var(--grey-dark);
@@ -65,7 +65,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-color: var(--grey-light);    
 }
-/* ==================== */
+/* ============================== */
 
 button {
     display: flex;
@@ -79,3 +79,6 @@ button {
     font-weight: 350;
 }
 
+.tab {
+    position: absolute;
+}
