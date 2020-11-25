@@ -79,6 +79,10 @@ button {
     font-weight: 350;
 }
 
+p, h1, h2, h3 {
+    margin: 0;
+}
+
 .tab {
     position: absolute;
 }

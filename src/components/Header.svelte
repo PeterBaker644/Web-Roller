@@ -20,6 +20,7 @@
                 {now.toLocaleDateString(undefined, date)}
                 &nbsp
                 {now.toLocaleTimeString(undefined, time)}
+                <!-- Temporary sidebar toggle: -->
                 <label>
                     <input type="checkbox" bind:checked={$page.roller}>
                     Dice Roller
@@ -93,8 +94,7 @@
     .portrait {
         width:100px;
         height:100px;
-        object-fit: cover;
-        object-position: 50% 20%;
+        object-fit: none;
         border: 4px solid var(--color-dark);
         border-radius: 100%;
         margin: 0.3em;

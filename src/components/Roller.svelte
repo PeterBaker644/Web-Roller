@@ -42,7 +42,7 @@
     ]
 </script>
 
-<div transition:fly="{{ x: 320, duration: 200 }}" class="roller-sidebar">
+<div transition:fly="{{ x: 320, duration: 200 }}" class="sidebar">
     <Pulltab side="roller"/>
     <section class="details">
         <div class="class">
@@ -81,8 +81,10 @@
 </div>
 
 <style>
-
-.roller-sidebar {
+p {
+    margin: 0.6em 0px;
+}
+.sidebar {
     position: relative;
     right: 0;
     width: 320px;
