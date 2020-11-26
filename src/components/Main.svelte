@@ -1,5 +1,6 @@
 <script>
     import Pulltab from "./elements/Pulltab.svelte";
+    import Message from "./elements/Message.svelte";
     import { fade } from 'svelte/transition';
     import { page } from "./stores.js";
 
@@ -33,7 +34,7 @@
             type:"character",
             time:"10:47 AM",
             date:"11/24/20",
-            text:"Back off Wren, I've got this",
+            text:"Take this you filthy scoundrel!",
             roll:{
                 dice: "2d10 + 6",
                 result: "(6) + (10) + 6"
@@ -59,24 +60,28 @@
 </script>
 
 <main class="test">
-    <div class="chat">
-        {#if !$page.room}
+    {#if !$page.room}
         <div in:fade="{{duration:200, delay:200}}">
             <Pulltab side="room"/>
         </div>
-        {/if}
-        Just a test
-        {#if !$page.roller}
+    {/if}
+    {#each log as entry}
+        <Message {...entry}></Message>
+    {/each}
+    {#if !$page.roller}
         <div in:fade="{{duration:200, delay:200}}">
             <Pulltab side="roller"/>
         </div>
-        {/if}
-    </div>
+    {/if}
 </main>
 
 <style>
     main {
         position: relative;
-        flex-grow: 1;
+        flex-grow: 1; 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* overflow: scroll; */
     }
 </style>

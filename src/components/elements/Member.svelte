@@ -3,7 +3,6 @@
     let compClass = null;
 
     if (Array.isArray(charClass)) {
-        console.log("It is an array");
         compClass = charClass.map((entry) => Object.values(entry).join(" ")).join(" ");
     } else {
         compClass = Object.values(charClass).join(" ");
@@ -11,7 +10,7 @@
     
 </script>
 
-<button class="member" id={id}>
+<button class="member" id="members{id}">
     <img class="portrait" src={image} alt="portrait of {character}">
     <div class="info">
         <p>{name}</p>
