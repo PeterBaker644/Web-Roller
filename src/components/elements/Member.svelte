@@ -20,6 +20,10 @@
 </button>
 
 <style>
+    button {
+        width: var(--column);
+        padding:0;
+    }
     h2 {
         font: normal 32px "cyrodiil";
         margin-top: -3px;
@@ -35,7 +39,6 @@
         display: flex;
         justify-content: space-between;
         gap: 6px;
-        width: 100%;
         height: 90px;
         background-color: var(--grey-dark);
         
@@ -53,5 +56,13 @@
     .info {
         flex-grow: 1;
         text-align: left;
+    }
+    @media (max-width: 1000px) {
+        button {
+            width: 80px;
+        }
+        .info {
+            display: none;
+        }
     }
 </style>

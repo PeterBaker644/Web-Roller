@@ -54,16 +54,16 @@ body {
 
 /* ==== Rules for scrollbars ==== */
 * {
-    scrollbar-width: none;
-    scrollbar-color: var(--grey-light) var(--grey-dark);
+    scrollbar-width: 8px;
+    scrollbar-color: var(--color-dark) var(--grey-dark);
 }
-body::-webkit-scrollbar {
-    width: 0px;
+*::-webkit-scrollbar {
+    width: 8px;
 }
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: var(--grey-dark);
 }
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: var(--grey-light);    
 }
 /* ============================== */

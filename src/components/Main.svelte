@@ -65,9 +65,11 @@
             <Pulltab side="room"/>
         </div>
     {/if}
-    {#each log as entry}
-        <Message {...entry}></Message>
-    {/each}
+        <section>
+            {#each log as entry}
+                <Message {...entry}></Message>
+            {/each}
+        </section>
     {#if !$page.roller}
         <div in:fade="{{duration:200, delay:200}}">
             <Pulltab side="roller"/>
@@ -79,9 +81,11 @@
     main {
         position: relative;
         flex-grow: 1; 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        /* overflow: scroll; */
+        padding: 1em 0;
+        /* align-content: end; */
+        height: calc(100vh - 222px);
+        bottom: 0px;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 </style>
